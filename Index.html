@@ -1,1 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rainbow Kitty Gallery</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      background: #111;
+      color: #fff;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * {S
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 2rem;
+      background: radial-gradient(circle at top left, #ff66cc 0%, transparent 30%),
+                  radial-gradient(circle at top right, #7c5cff 0%, transparent 24%),
+                  radial-gradient(circle at bottom left, #3bffb1 0%, transparent 28%),
+                  #101010;
+    }
+
+    .page {
+      width: min(1200px, 100%);
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.4rem, 4vw, 4rem);
+      letter-spacing: -0.05em;
+    }
+
+    p {
+      margin: 0.75rem auto 0;
+      max-width: 44rem;
+      color: #d4d4d8;
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    .gallery {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    .item {
+      border-radius: 1.5rem;
+      padding: 6px;
+      background: linear-gradient(135deg, #ff3ec8, #ffb01f, #5af3ff, #8e44ad, #ff3ec8);
+      background-size: 400% 400%;
+      animation: shimmer 7s ease infinite;
+    }
+
+    .item img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      border-radius: 1.25rem;
+      object-fit: cover;
+      aspect-ratio: 4 / 3;
+      background: #111;
+    }
+
+    @keyframes shimmer {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    .caption {
+      margin-top: 0.75rem;
+      text-align: center;
+      font-size: 0.95rem;
+      color: #f0f0f5;
+    }
+
+    @media (max-width: 540px) {
+      body {
+        padding: 1rem;
+      }
+
+      .item {
+        padding: 4px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>Rainbow Kitty Gallery</h1>
+      <p>Enjoy a collection of sweet kitty stock photos with rainbow gradient borders. Each image is framed in a lively gradient and arranged in a responsive grid for playful viewing.</p>
+    </header>
+
+    <section class="gallery">
+      <div class="item"><img src="https://i.pinimg.com/736x/67/cd/6e/67cd6ec3b4ce8855e3a83c577329fe59.jpg" alt="Kitten 1" /></div>
+      <div class="item"><img src="https://i.pinimg.com/736x/1d/f6/94/1df694e2643c627ad3bb9afc2503e067.jpg" alt="Kitten 2" /></div>
+      <div class="item"><img src="https://i.pinimg.com/736x/51/ed/f4/51edf474bd1cafb90ad9227ba0954fc2.jpg" alt="Kitten 3" /></div>
+      <div class="item"><img src="https://i.pinimg.com/736x/e9/f1/e3/e9f1e3370611630bb75d67500a9a4469.jpg" alt="Kitten 4" /></div>
+      <div class="item"><img src="https://i.pinimg.com/1200x/ec/9a/64/ec9a64a270653633075a430f9a4f3dae.jpg" alt="Kitten 5" /></div>
+      <div class="item"><img src="https://i.pinimg.com/474x/6b/bc/10/6bbc10c5a1f7a7f3417fc300434811fb.jpg" alt="Kitten 6" /></div>
+      <div class="item"><img src="https://i.pinimg.com/736x/46/ed/88/46ed888289a610e7c85fca5dec8e1599.jpg" alt="Kitten 7" /></div>
+      <div class="item"><img src="https://i.pinimg.com/736x/c4/a7/33/c4a7333d7f11f68f50ec2ecadef55fec.jpg" alt="Kitten 8" /></div>
+      <div class="item"><img src="https://i.pinimg.com/736x/bd/b3/18/bdb31809e30e0b2ad62d7981c02e7270.jpg" alt="Kitten 9" /></div>
+    </section>
+  </div>
+</body>
+</html>
 
